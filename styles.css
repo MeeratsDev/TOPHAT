@@ -1,0 +1,141 @@
+/* {
+    outline: 1px solid red;
+} */
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 0 15rem;
+    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #333;
+}    
+
+p {
+    color: #818181;
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.25rem 15rem;
+    border-bottom: 1px solid #dadce0;
+    margin-left: -15rem;
+    margin-right: -15rem;
+    box-sizing: border-box;
+}
+
+nav a {
+    text-decoration: none;
+    color: #818181;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1.25rem;
+    margin: 0 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #ff6836;
+}
+
+footer {
+    margin-top: auto;
+    padding: 1rem 15rem;
+    color: #666;
+    font-size: 14px;
+    background-color: rgb(249, 249, 249);
+    margin-left: -15rem;
+    margin-right: -15rem;
+}
+
+.card-container {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.studios-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.staff-grid {
+    grid-template-columns: repeat(3, 250px);
+    justify-content: center;
+}
+
+.studio-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.studio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: #c0c0c0;
+}
+
+.studio-card h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    color: #555;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.staff-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.staff-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: #c0c0c0;
+}
+
+.staff-card h3 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.staff-card h5 {
+    margin: 0;
+    color: #888;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+}
+
+.staff-photo {
+    border: 2px solid #e0e0e0;
+}
