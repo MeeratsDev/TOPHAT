@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Teragram</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+	<nav>
+		<a class="logo" href="../../"><img src="../../images/teragram.png" alt="Teragram" width="175px"></a>
+
+		<div class="nav_bg_curtain"></div>
+
+		<ul class="nav_list">
+			<li class="nav_item">
+				<a href="#">About</a>
+				<ul class="sub_list">
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Company Structure</a></li>
+					<li><a href="#">Management Team</a></li>
+					<li><a href="#">Projects</a></li>
+				</ul>
+			</li>
+
+			<li class="nav_item">
+				<a href="#">Employees</a>
+				<ul class="sub_list">
+					<li><a href="#">Careers</a></li>
+					<li><a href="#">Work Environment</a></li>
+					<li><a href="#">Work Culture</a></li>
+				</ul>
+			</li>
+
+			<li class="nav_item">
+				<a href="#">Media</a>
+				<ul class="sub_list">
+					<li><a href="#">Corporate News</a></li>
+					<li><a href="#">Media Library</a></li>
+					<li><a href="#">Press Releases</a></li>
+					<li><a href="#">Press Contacts</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<section class="hero">
+		<h1>Company Structure</h1>
+	</section>
+
+
+
+	<footer>
+	    <div class="footer-inner">
+	        <div class="footer-brand">
+	            <img src="./images/teragram.png" alt="Teragram" width="140px">
+	            <p>An Australian technology &amp; multi-media entertainment holdings company, based in Brisbane.</p>
+	        </div>
+
+	        <div class="footer-links">
+	            <div class="footer-col">
+	                <h5>Company</h5>
+	                <ul>
+	                    <li><a href="#">About Us</a></li>
+	                    <li><a href="#">Company Structure</a></li>
+	                    <li><a href="#">Management Team</a></li>
+	                    <li><a href="#">Board Members</a></li>
+	                </ul>
+	            </div>
+	            <div class="footer-col">
+	                <h5>Work With Us</h5>
+	                <ul>
+	                    <li><a href="#">Careers</a></li>
+	                    <li><a href="#">Work Environment</a></li>
+	                    <li><a href="#">Work Culture</a></li>
+	                </ul>
+	            </div>
+	            <div class="footer-col">
+	                <h5>Projects</h5>
+	                <ul>
+	                    <li><a href="https://watchflicker.doubtmedia.com/" target="_blank" rel="noopener">Watch Flicker</a></li>
+	                    <li><a href="https://github.com/MeeratsDev/WEX-Framework" target="_blank" rel="noopener">WEX Framework</a></li>
+	                    <li><a href="https://github.com/MeeratsDev/SymLang" target="_blank" rel="noopener">Sym</a></li>
+	                    <li><a href="https://astromech.doubtmedia.com/" target="_blank" rel="noopener">Astromech</a></li>
+	                </ul>
+	            </div>
+	            <div class="footer-col">
+	                <h5>Media</h5>
+	                <ul>
+	                    <li><a href="#">Corporate News</a></li>
+	                    <li><a href="#">Press Releases</a></li>
+	                    <li><a href="#">Media Library</a></li>
+	                    <li><a href="#">Press Contacts</a></li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="footer-bottom">
+	        <p>&copy; 2026 Teragram Group Pty Ltd. All rights reserved.</p>
+	        <p>Brisbane, Australia</p>
+	    </div>
+	</footer>
+
+    <script>
+    	document.addEventListener('DOMContentLoaded', () => {
+		    const navItems = document.querySelectorAll('.nav_item');
+		    const curtain = document.querySelector('.nav_bg_curtain');
+
+		    // Adjust this height based on your longest sub-menu
+		    const curtainHeight = "220px";
+
+		    navItems.forEach(item => {
+		        item.addEventListener('mouseenter', () => {
+		            curtain.style.height = curtainHeight;
+		        });
+
+		        item.addEventListener('mouseleave', () => {
+		            // Check if we are still hovering over the nav list
+		            // to prevent flickering
+		            curtain.style.height = "0";
+		        });
+		    });
+		});
+    </script>
+</body>
+</html>
