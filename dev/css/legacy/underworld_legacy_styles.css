@@ -22,8 +22,9 @@ main {
 
 #hero-image {
 	position: relative; /* critical — anchors the overlay */
-	max-width: auto;
-	max-height: 50rem;
+	margin: 0 auto;
+	max-width: 100%;
+	max-height: 48rem;
 	aspect-ratio: 16 / 9;
 	overflow: hidden;
 }
