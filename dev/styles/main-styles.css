@@ -37,3 +37,9 @@ nav ul li a {
 .dropdown li a {
 	font-family: var(--body-font);
 }
+
+main h3 {
+	font-family: var(--heading-font);
+	font-size: 1.65rem;
+	font-weight: 600;
+}
