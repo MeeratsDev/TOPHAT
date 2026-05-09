@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" id="main" href="../styles/main-styles.css" />
+		<link rel="stylesheet" id="nav" href="../styles/elements/navbar.css" />
+		<link rel="stylesheet" id="footer" href="../styles/elements/footer.css" />
+		<link rel="stylesheet" id="legacy" href="../styles/elements/main-section.css" />
+		<title>Underworld</title>
+		<style>
+			.barrier {
+				height: 7rem;
+			}
+
+			.prod-card {
+			    background: var(--background-colour-1);
+			    padding: 2.5rem;
+			    display: flex;
+			    flex-direction: row;          /* changed from column */
+			    align-items: center;
+			    justify-content: space-between;
+			    gap: 1.5rem;
+			    text-decoration: none;
+			    color: inherit;
+			    transition: background 0.25s ease;
+			}
+
+			.prod-card:hover {
+				background: #e8e4dc;
+			}
+
+			.prod-card h3 {
+				font-family: var(--heading-font);
+				font-size: 1.3rem;
+				font-weight: 600;
+				color: var(--text-colour-1);
+				margin: 0;
+				line-height: 1.25;
+			}
+
+			.prod-card img {
+			    width: 40%;
+			    height: auto;
+			    flex-shrink: 0;
+			    display: block;
+			}
+
+			.prod-card-text {
+			    display: flex;
+			    flex-direction: column;
+			    gap: 0.5rem;
+			}
+
+			.prod-card-meta {
+			    font-family: var(--body-font);
+			    font-size: 0.75rem;
+			    color: #a09080;
+			    margin-top: auto;
+			    padding-top: 1rem;
+			    border-top: 1px solid #d4cfc8;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<div class="nav-left">
+						<div class="logo-container">
+							<a href="../">
+								<img
+									src="../content/images/uw_brown.png"
+									alt=""
+									id="nav-logo-1"
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="nav-right">
+						<li>
+							<a href="#">WHO WE ARE</a>
+							<ul class="dropdown">
+								<li><a></a></li>
+								<li><a href="#">Our Story</a></li>
+								<li><a href="./">The Team</a></li>
+								<li><a href="#">Our Values</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">WHAT WE DO</a>
+							<ul class="dropdown">
+								<li><a></a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#">Projects</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">PRODUCTIONS</a>
+							<ul class="dropdown">
+								<li><a></a></li>
+								<li><a href="#">Film & TV</a></li>
+								<li><a href="#">Music</a></li>
+								<li><a href="#">Live Events</a></li>
+								<li><a href="#">Games</a></li>
+								<li><a href="#">Books & Print</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">CAREERS</a>
+							<ul class="dropdown">
+								<li><a></a></li>
+								<li><a href="#">Open Roles</a></li>
+								<li><a href="#">Internships</a></li>
+							</ul>
+						</li>
+					</div>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section>
+				<div class="barrier"></div>
+			</section>
+
+			<section class="productions">
+				<p class="section-label">The Team</p>
+				<h2>The Team</h2>
+				<div class="prod-grid">
+					<a class="prod-card">
+						<div class="prod-card-text">
+							<h3>Bodhi Reimer</h3>
+							<span class="prod-card-meta">President & Creative Director</span>
+						</div>
+						<img src="../content/images/bodhi-reimer-new.jpg" alt="">
+					</a>
+
+					<a class="prod-card">
+						<div class="prod-card-text">
+							<h3>Riley Thorpe</h3>
+							<span class="prod-card-meta">Vice President, Creative Direction</span>
+						</div>
+						<img src="../content/images/placeholder.webp" alt="">
+					</a>
+
+					<a class="prod-card">
+						<div class="prod-card-text">
+							<h3>William Sammon</h3>
+							<span class="prod-card-meta">Vice President, Books & Print</span>
+						</div>
+						<img src="../content/images/placeholder.webp" alt="">
+					</a>
+
+					<a class="prod-card">
+						<div class="prod-card-text">
+							<h3>Lachlan Bellamy</h3>
+							<span class="prod-card-meta">Production Manager, Film & TV</span>
+						</div>
+						<img src="../content/images/placeholder.webp" alt="">
+					</a>
+
+					<a class="prod-card">
+						<div class="prod-card-text">
+							<h3>Charlie Shmakov</h3>
+							<span class="prod-card-meta">Production Associate, Art & Design</span>
+						</div>
+						<img src="../content/images/placeholder.webp" alt="">
+					</a>
+
+					<a class="prod-card">
+						<div class="prod-card-text">
+							<h3>Connor Hannaford</h3>
+							<span class="prod-card-meta">Production Associate, Art & Design</span>
+						</div>
+						<img src="../content/images/placeholder.webp" alt="">
+					</a>
+
+					<a class="prod-card">
+						<div class="prod-card-text">
+							<h3>Finn Schmidt</h3>
+							<span class="prod-card-meta">Technical Architect, Programming</span>
+						</div>
+						<img src="../content/images/placeholder.webp" alt="">
+					</a>
+
+					<a class="prod-card">
+						<div class="prod-card-text">
+							<h3>Hayden Northend</h3>
+							<span class="prod-card-meta">Technical Associate, Programming</span>
+						</div>
+						<img src="../content/images/placeholder.webp" alt="">
+					</a>
+
+					<a class="prod-card">
+						<div class="prod-card-text">
+							<h3>Justin Miorandi</h3>
+							<span class="prod-card-meta">Technical Associate, Programming</span>
+						</div>
+						<img src="../content/images/placeholder.webp" alt="">
+					</a>
+
+				</div>
+			</section>
+
+			<section class="careers">
+				<div class="careers-inner">
+					<div>
+						<p class="section-label">Careers</p>
+						<h2>Come work in the dark.</h2>
+						<p>We're always looking for people who care about craft. See what's open.</p>
+					</div>
+					<div style="display:flex; gap:1rem; flex-shrink:0;">
+						<a href="#" class="btn btn-dark">Open Roles</a>
+						<a href="#" class="btn btn-outline">Internships</a>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<footer>
+			<div class="footer-content">
+				<div class="footer-inner">
+					<!-- Brand column -->
+					<div class="footer-brand">
+						<img
+							src="../content/images/uw_brown.png"
+							alt="Underworld"
+							class="footer-logo"
+						/>
+						<p class="footer-tagline">
+							Crafting worlds beneath the surface - film, music, and
+							live experiences that linger.
+						</p>
+						<div class="footer-socials">
+							<!-- Simple SVG icons inline so no icon library needed -->
+							<a href="#" aria-label="Instagram">
+								<svg
+									width="14"
+									height="14"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.8"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<rect
+										x="2"
+										y="2"
+										width="20"
+										height="20"
+										rx="5"
+									/>
+									<circle cx="12" cy="12" r="5" />
+									<circle
+										cx="17.5"
+										cy="6.5"
+										r="1"
+										fill="currentColor"
+										stroke="none"
+									/>
+								</svg>
+							</a>
+							<a href="#" aria-label="LinkedIn">
+								<svg
+									width="14"
+									height="14"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.8"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<rect
+										x="2"
+										y="2"
+										width="20"
+										height="20"
+										rx="3"
+									/>
+									<line x1="8" y1="11" x2="8" y2="16" />
+									<line x1="8" y1="8" x2="8" y2="8.5" />
+									<path d="M12 16v-5m0 0c0-1.5 4-1.5 4 0v5" />
+								</svg>
+							<!--</a>-->
+							<a href="#" aria-label="Vimeo">
+								<svg
+									width="14"
+									height="14"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.8"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										d="M22 7c-.1 2.2-1.6 5.2-4.6 9C14.3 20 11.6 22 9.4 22c-1.3 0-2.5-1.2-3.4-3.6L4.1 12C3.4 9.6 2.6 8.4 1.8 8.4c-.2 0-.8.4-1.8 1.1L0 8.3C1.1 7.3 2.2 6.3 3.2 5.3c1.5-1.3 2.6-2 3.4-2 1.7-.2 2.8 1 3.2 3.6.4 2.8.7 4.5.9 5.1.5 2.3 1 3.4 1.6 3.4.5 0 1.1-.8 2.1-2.3.9-1.5 1.4-2.7 1.5-3.4.1-1.3-.4-2-1.5-2-.5 0-1.1.1-1.6.4 1-3.3 3-4.9 5.9-4.8 2.1.1 3.1 1.4 3 4z"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<!-- Who We Are -->
+					<div class="footer-col">
+						<h4>Who We Are</h4>
+						<ul>
+							<li><a href="#">Our Story</a></li>
+							<li><a href="#">The Team</a></li>
+							<li><a href="#">Our Values</a></li>
+						</ul>
+					</div>
+
+					<!-- What We Do + Productions -->
+					<div class="footer-col">
+						<h4>Productions</h4>
+						<ul>
+							<li><a href="#">Film & TV</a></li>
+							<li><a href="#">Music</a></li>
+							<li><a href="#">Live Events</a></li>
+							<li><a href="#">Games</a></li>
+							<li><a href="#">Books & Print</a></li>
+						</ul>
+					</div>
+
+					<!-- Work With Us -->
+					<div class="footer-col">
+						<h4>Work With Us</h4>
+						<ul>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Projects</a></li>
+							<li><a href="#">Open Roles</a></li>
+							<li><a href="#">Internships</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Bottom bar -->
+				<div class="footer-bottom">
+					<p>
+						&copy; <span id="year"></span> Underworld Pty Ltd. All
+						rights reserved.
+					</p>
+					<div class="footer-bottom-links" aria-label="Legal">
+						<a href="#">Privacy Policy</a>
+						<a href="#">Terms of Use</a>
+						<a href="#">Contact</a>
+					<div/>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+	<script src="../styles/elements/navbar.js" id="navbar-script"></script>
+
+	<script id="year">
+		document.getElementById("year").textContent = new Date().getFullYear();
+	</script>
+</html>
