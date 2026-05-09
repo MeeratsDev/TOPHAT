@@ -1,92 +1,342 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, height=device-height, initial-scale=1.0"
-		/>
-		<title>Underworld Pty Ltd. | underworld.ltd</title>
-		<link
-			rel="stylesheet"
-			id="legacy"
-			href="css/legacy/underworld_legacy_styles.css"
-		/>
-		<link
-			rel="stylesheet"
-			id="navbar"
-			href="css/legacy/elements/navbar.css"
-		/>
+		<link rel="stylesheet" id="main" href="./styles/main-styles.css" />
+		<link rel="stylesheet" id="nav" href="./styles/elements/navbar.css" />
+		<link rel="stylesheet" id="footer" href="./styles/elements/footer.css" />
+		<link rel="stylesheet" id="legacy" href="./styles/elements/main-section.css" />
+		<title>Underworld</title>
 	</head>
 	<body>
 		<header>
 			<nav>
 				<ul>
-					<li>
-						<a href="#">WHO WE ARE</a>
-						<ul class="dropdown">
-							<li><a></a></li>
-							<li><a href="#">Our Story</a></li>
-							<li><a href="#">The Team</a></li>
-							<li><a href="#">Our Values</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">WHAT WE DO</a>
-						<ul class="dropdown">
-							<li><a></a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Projects</a></li>
-						</ul>
-					</li>
-					<div class="logo-container">
-						<img
-							src="./content/images/underworld_logo_grey.png"
-							alt=""
-							id="nav-logo-1"
-						/>
-						<img src="" alt="" id="nav-logo-2" />
+					<div class="nav-left">
+						<div class="logo-container">
+							<img
+								src="./content/images/uw_brown.png"
+								alt=""
+								id="nav-logo-1"
+							/>
+						</div>
 					</div>
-					<li>
-						<a href="#">PRODUCTIONS</a>
-						<ul class="dropdown">
-							<li><a></a></li>
-							<li><a href="#">Film</a></li>
-							<li><a href="#">Music</a></li>
-							<li><a href="#">Live Events</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">CAREERS</a>
-						<ul class="dropdown">
-							<li><a></a></li>
-							<li><a href="#">Open Roles</a></li>
-							<li><a href="#">Internships</a></li>
-						</ul>
-					</li>
+					<div class="nav-right">
+						<li>
+							<a href="#">WHO WE ARE</a>
+							<ul class="dropdown">
+								<li><a></a></li>
+								<li><a href="#">Our Story</a></li>
+								<li><a href="#">The Team</a></li>
+								<li><a href="#">Our Values</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">WHAT WE DO</a>
+							<ul class="dropdown">
+								<li><a></a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#">Projects</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">PRODUCTIONS</a>
+							<ul class="dropdown">
+								<li><a></a></li>
+								<li><a href="#">Film & TV</a></li>
+								<li><a href="#">Music</a></li>
+								<li><a href="#">Live Events</a></li>
+								<li><a href="#">Games</a></li>
+								<li><a href="#">Books & Print</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">CAREERS</a>
+							<ul class="dropdown">
+								<li><a></a></li>
+								<li><a href="#">Open Roles</a></li>
+								<li><a href="#">Internships</a></li>
+							</ul>
+						</li>
+					</div>
 				</ul>
 			</nav>
 		</header>
 
 		<main>
-			<section id="hero">
-				<div id="hero-image">
-					<img
-						src="./content/images/sectorfall_in-game_glaxy.png"
-						alt=""
-					/>
-					<div class="hero-overlay">
-						<span class="hero-text">Sectorfall</span>
-						<span class="hero-subtext"
-							><a href="">More Details</a></span
-						>
+
+			<!-- ── HERO ─────────────────────────────────────── -->
+			<section class="hero">
+				<h1>We craft worlds in the <em>dark.</em></h1>
+				<p>
+					Underworld is an independent production studio making film, music, live events, and interactive experiences that stay with you long after the lights go out.
+				</p>
+				<div class="hero-actions">
+					<a href="#" class="btn btn-dark">View Our Work</a>
+					<a href="#" class="btn btn-outline">Our Story</a>
+				</div>
+			</section>
+
+			<!-- ── FEATURED PRODUCTIONS ──────────────────────── -->
+			<section class="productions">
+				<p class="section-label">Selected Work</p>
+				<h2>Recent productions</h2>
+				<div class="prod-grid">
+					<a href="#" class="prod-card">
+						<span class="prod-card-type">Game · 2026</span>
+						<h3>Sectorfall</h3>
+						<p>A persistent sci-fi grand strategy game that focuses on political and economic simulation.</p>
+						<span class="prod-card-meta">Video Game · Early Access</span>
+					</a>
+					<a href="#" class="prod-card">
+						<span class="prod-card-type">Game · 2024</span>
+						<h3>Bernard the Bunny</h3>
+						<p>A video game about where you play as Bernard, a bunny who has lost his prized eggs and must find them before Flynn the Fox hunts you down.</p>
+						<span class="prod-card-meta">Video Game · Full Release</span>
+					</a>
+					<a href="#" class="prod-card">
+						<span class="prod-card-type">Book · 2026</span>
+						<h3>Sectorfall: Secrets of Morvex</h3>
+						<p>A book that delves into the secrets of Morvex, a fictional planet in the Sectorfall universe.</p>
+						<span class="prod-card-meta">Book · Pre-Order</span>
+					</a>
+				</div>
+			</section>
+
+			<!-- ── ABOUT ─────────────────────────────────────── -->
+			<section class="about">
+				<div>
+					<p class="section-label">Who We Are</p>
+					<h2>Independent since day one.</h2>
+					<p>
+						We're a studio of 10 aspiring creatives located in Queensland Australia producing the best works we can.
+					</p>
+					<p>
+						No shareholders. No studio notes. Just a mandate to make things that matter.
+					</p>
+					<a href="#" class="btn btn-outline" style="margin-top: 1rem;">Meet the team</a>
+				</div>
+				<div>
+					<div class="about-stats">
+						<div>
+							<span class="stat-num">10+</span>
+							<span class="stat-label">Productions</span>
+						</div>
+						<div>
+							<span class="stat-num">1,800+</span>
+							<span class="stat-label">Viewers reached</span>
+						</div>
+						<div>
+							<span class="stat-num">10</span>
+							<span class="stat-label">Multifaceted creatives</span>
+						</div>
+						<div>
+							<span class="stat-num">2</span>
+							<span class="stat-label">Years independent</span>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<section></section>
+			<!-- ── DISCIPLINES ───────────────────────────────── -->
+			<section class="disciplines">
+				<p class="section-label">What We Do</p>
+				<h2>Five disciplines, one vision</h2>
+				<ul class="disciplines-list">
+					<li>
+						<a href="#" class="discipline-row">
+							<span class="discipline-num">01</span>
+							<span class="discipline-name">Film & Television</span>
+							<span class="discipline-desc">Feature films, short form, documentary, and episodic series built for bold, uncompromising storytelling.</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="discipline-row">
+							<span class="discipline-num">02</span>
+							<span class="discipline-name">Music</span>
+							<span class="discipline-desc">Original scores, artist development, and full record production from our in-house studio.</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="discipline-row">
+							<span class="discipline-num">03</span>
+							<span class="discipline-name">Live Events</span>
+							<span class="discipline-desc">Immersive touring productions, intimate showcases, and large-scale live spectacles.</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="discipline-row">
+							<span class="discipline-num">04</span>
+							<span class="discipline-name">Games</span>
+							<span class="discipline-desc">Narrative-driven digital and tabletop experiences that blur the line between story and play.</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="discipline-row">
+							<span class="discipline-num">05</span>
+							<span class="discipline-name">Books & Print</span>
+							<span class="discipline-desc">Graphic novels, novelisations, and art books that extend the worlds we create on screen.</span>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<!-- ── CAREERS ───────────────────────────────────── -->
+			<section class="careers">
+				<div class="careers-inner">
+					<div>
+						<p class="section-label">Careers</p>
+						<h2>Come work in the dark.</h2>
+						<p>We're always looking for people who care about craft. See what's open.</p>
+					</div>
+					<div style="display:flex; gap:1rem; flex-shrink:0;">
+						<a href="#" class="btn btn-dark">Open Roles</a>
+						<a href="#" class="btn btn-outline">Internships</a>
+					</div>
+				</div>
+			</section>
+
 		</main>
+
+		<footer>
+			<div class="footer-content">
+				<div class="footer-inner">
+					<!-- Brand column -->
+					<div class="footer-brand">
+						<img
+							src="./content/images/uw_brown.png"
+							alt="Underworld"
+							class="footer-logo"
+						/>
+						<p class="footer-tagline">
+							Crafting worlds beneath the surface - film, music, and
+							live experiences that linger.
+						</p>
+						<div class="footer-socials">
+							<!-- Simple SVG icons inline so no icon library needed -->
+							<a href="#" aria-label="Instagram">
+								<svg
+									width="14"
+									height="14"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.8"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<rect
+										x="2"
+										y="2"
+										width="20"
+										height="20"
+										rx="5"
+									/>
+									<circle cx="12" cy="12" r="5" />
+									<circle
+										cx="17.5"
+										cy="6.5"
+										r="1"
+										fill="currentColor"
+										stroke="none"
+									/>
+								</svg>
+							</a>
+							<a href="#" aria-label="LinkedIn">
+								<svg
+									width="14"
+									height="14"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.8"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<rect
+										x="2"
+										y="2"
+										width="20"
+										height="20"
+										rx="3"
+									/>
+									<line x1="8" y1="11" x2="8" y2="16" />
+									<line x1="8" y1="8" x2="8" y2="8.5" />
+									<path d="M12 16v-5m0 0c0-1.5 4-1.5 4 0v5" />
+								</svg>
+							<!--</a>-->
+							<a href="#" aria-label="Vimeo">
+								<svg
+									width="14"
+									height="14"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.8"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										d="M22 7c-.1 2.2-1.6 5.2-4.6 9C14.3 20 11.6 22 9.4 22c-1.3 0-2.5-1.2-3.4-3.6L4.1 12C3.4 9.6 2.6 8.4 1.8 8.4c-.2 0-.8.4-1.8 1.1L0 8.3C1.1 7.3 2.2 6.3 3.2 5.3c1.5-1.3 2.6-2 3.4-2 1.7-.2 2.8 1 3.2 3.6.4 2.8.7 4.5.9 5.1.5 2.3 1 3.4 1.6 3.4.5 0 1.1-.8 2.1-2.3.9-1.5 1.4-2.7 1.5-3.4.1-1.3-.4-2-1.5-2-.5 0-1.1.1-1.6.4 1-3.3 3-4.9 5.9-4.8 2.1.1 3.1 1.4 3 4z"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<!-- Who We Are -->
+					<div class="footer-col">
+						<h4>Who We Are</h4>
+						<ul>
+							<li><a href="#">Our Story</a></li>
+							<li><a href="#">The Team</a></li>
+							<li><a href="#">Our Values</a></li>
+						</ul>
+					</div>
+
+					<!-- What We Do + Productions -->
+					<div class="footer-col">
+						<h4>Productions</h4>
+						<ul>
+							<li><a href="#">Film & TV</a></li>
+							<li><a href="#">Music</a></li>
+							<li><a href="#">Live Events</a></li>
+							<li><a href="#">Games</a></li>
+							<li><a href="#">Books & Print</a></li>
+						</ul>
+					</div>
+
+					<!-- Work With Us -->
+					<div class="footer-col">
+						<h4>Work With Us</h4>
+						<ul>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Projects</a></li>
+							<li><a href="#">Open Roles</a></li>
+							<li><a href="#">Internships</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Bottom bar -->
+				<div class="footer-bottom">
+					<p>
+						&copy; <span id="year"></span> Underworld Pty Ltd. All
+						rights reserved.
+					</p>
+					<div class="footer-bottom-links" aria-label="Legal">
+						<a href="#">Privacy Policy</a>
+						<a href="#">Terms of Use</a>
+						<a href="#">Contact</a>
+					<div/>
+				</div>
+			</div>
+		</footer>
 	</body>
 
-	<script src="js/navbar.js" id="navbar"></script>
+	<script src="./styles/elements/navbar.js" id="navbar-script"></script>
+
+	<script id="year">
+		document.getElementById("year").textContent = new Date().getFullYear();
+	</script>
 </html>

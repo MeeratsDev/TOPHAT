@@ -1,4 +1,9 @@
 const nav_elements = document.querySelectorAll("nav ul li");
+const nav = document.querySelector("header nav");
+const nav_links = document.querySelectorAll("nav ul li a");
+const logo = document.querySelector(
+	"header nav ul .nav-left .logo-container img",
+);
 
 nav_elements.forEach((element) => {
 	element.addEventListener("mouseenter", () => {
@@ -31,4 +36,20 @@ nav_elements.forEach((li) => {
 	li.addEventListener("mouseleave", hideDropdown);
 	dropdown.addEventListener("mouseenter", showDropdown);
 	dropdown.addEventListener("mouseleave", hideDropdown);
+});
+
+window.addEventListener("scroll", () => {
+	if (window.scrollY > 100) {
+		nav.classList.add("scrolled");
+		nav_links.forEach((element) => {
+			element.classList.add("scrolled");
+		});
+		logo.src = "../../../dev/content/images/uw_grey.png";
+	} else {
+		nav.classList.remove("scrolled");
+		nav_links.forEach((element) => {
+			element.classList.remove("scrolled");
+		});
+		logo.src = "../../../dev/content/images/uw_brown.png";
+	}
 });

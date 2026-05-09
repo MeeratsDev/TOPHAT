@@ -1,7 +1,5 @@
 nav {
-	background-color: #1c1d1d;
-	background: #1c1d1d;
-	position: sticky;
+	position: fixed;
 	top: 0;
 	width: 100%;
 	box-sizing: border-box;
@@ -9,19 +7,38 @@ nav {
 	height: 4.5rem;
 	overflow: visible;
 	z-index: 1000;
-	box-shadow: 0 0 50px #000;
+	transition: all 0.5s ease-in-out;
+}
+
+nav.scrolled {
+	background-color: #1c1a19;
+	background: #1c1a19;
+	box-shadow: 0 0 50px #000000;
 }
 
 nav ul {
 	display: flex;
 	align-items: center;
-	justify-content: center;
 	list-style: none;
 	margin: 0;
 	padding: 0 2rem;
-	gap: 6rem;
+	gap: 2rem;
 	height: 100%;
 	overflow: visible;
+}
+
+nav ul .nav-left {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+nav ul .nav-right {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: right;
 }
 
 nav ul li {
@@ -33,22 +50,28 @@ nav ul li {
 }
 
 nav ul li a {
-	color: #acacac;
+	/* color: #acacac; */
+	color: #2b2625;
 	text-decoration: none;
-	transition: color 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 	font-size: 13px;
 }
 
+nav ul li a.scrolled {
+	color: #acacac;
+}
+
 nav ul li a:hover {
-	color: #eeeeee;
+	/* color: #eeeeee; */
+	color: #0d0b0b;
 }
 
 /* Dropdown when moved to body */
 body > .dropdown {
 	position: fixed;
-	background: linear-gradient(to bottom, #1b1b1b, #000);
+
 	min-width: 160px;
-	padding: 1rem 0;
+	padding: 0 0;
 	margin: 0;
 	list-style: none;
 	z-index: 999;
@@ -61,6 +84,10 @@ body > .dropdown {
 		transform 0.5s ease,
 		visibility 0.2s;
 	border-radius: 10px;
+}
+
+body > .dropdown.scrolled {
+	background: linear-gradient(to bottom, #2b2625, #0d0b0b);
 }
 
 body > .dropdown.active {
@@ -98,6 +125,6 @@ body > .dropdown li a:hover {
 }
 
 .logo-container img {
-	height: 3rem;
+	height: 2rem;
 	width: auto;
 }

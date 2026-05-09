@@ -1,0 +1,373 @@
+/* ── Main content spacing ───────────────────────── */
+
+main {
+	padding-bottom: 12rem; /* room above fixed footer */
+}
+
+/* ── Hero ───────────────────────────────────────── */
+
+.hero {
+	min-height: 92vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 5rem;
+	border-bottom: 1px solid #d4cfc8;
+}
+
+.hero h1 {
+	font-size: 5rem;
+	font-family: var(--heading-font);
+	font-weight: 600;
+	color: var(--text-colour-1);
+	line-height: 1.05;
+	margin: 0 0 1.5rem;
+	max-width: 14ch;
+	letter-spacing: -0.02em;
+}
+
+.hero h1 em {
+	font-style: italic;
+	color: #8b6a50;
+}
+
+.hero p {
+	font-size: 1.45rem;
+	font-family: var(--body-font);
+	color: #5a4a40;
+	margin: 0 0 3rem;
+	max-width: 38ch;
+	line-height: 1.65;
+}
+
+.hero-actions {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.btn {
+	font-family: var(--heading-font);
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0.9rem 2rem;
+	transition:
+		background 0.25s ease,
+		color 0.25s ease,
+		border-color 0.25s ease;
+	display: inline-block;
+}
+
+.btn-dark {
+	background: var(--text-colour-1);
+	color: #efefe8;
+	border: 1px solid var(--text-colour-1);
+}
+
+.btn-dark:hover {
+	background: #8b6a50;
+	border-color: #8b6a50;
+}
+
+.btn-outline {
+	background: transparent;
+	color: #7a6a60;
+	border: 1px solid #c4bfb8;
+}
+
+.btn-outline:hover {
+	border-color: var(--text-colour-1);
+	color: var(--text-colour-1);
+}
+
+/* ── Section label ──────────────────────────────── */
+
+.section-label {
+	font-family: var(--heading-font);
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: #8b6a50;
+	display: flex;
+	align-items: center;
+	gap: 0.9rem;
+	margin: 0 0 1.5rem;
+}
+
+.section-label::before {
+	content: "";
+	width: 2rem;
+	height: 1px;
+	background: #8b6a50;
+	display: block;
+}
+
+/* ── Productions grid ───────────────────────────── */
+
+.productions {
+	padding: 5rem 0;
+	border-bottom: 1px solid #d4cfc8;
+}
+
+.productions h2 {
+	font-size: 2.5rem;
+	font-family: var(--heading-font);
+	font-weight: 600;
+	color: var(--text-colour-1);
+	margin: 0 0 3.5rem;
+	letter-spacing: -0.02em;
+}
+
+.prod-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1px;
+	background: #d4cfc8;
+	border: 1px solid #d4cfc8;
+}
+
+.prod-card {
+	background: var(--background-colour-1);
+	padding: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	text-decoration: none;
+	color: inherit;
+	transition: background 0.25s ease;
+}
+
+.prod-card:hover {
+	background: #e8e4dc;
+}
+
+.prod-card-type {
+	font-family: var(--heading-font);
+	font-size: 0.65rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: #8b6a50;
+}
+
+.prod-card h3 {
+	font-family: var(--heading-font);
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: var(--text-colour-1);
+	margin: 0;
+	line-height: 1.25;
+}
+
+.prod-card p {
+	font-family: var(--body-font);
+	font-size: 0.9rem;
+	color: #7a6a60;
+	margin: 0;
+	line-height: 1.65;
+}
+
+.prod-card-meta {
+	font-family: var(--body-font);
+	font-size: 0.75rem;
+	color: #a09080;
+	margin-top: auto;
+	padding-top: 1rem;
+	border-top: 1px solid #d4cfc8;
+}
+
+/* ── About ──────────────────────────────────────── */
+
+.about {
+	padding: 5rem 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 8rem;
+	align-items: start;
+	border-bottom: 1px solid #d4cfc8;
+}
+
+.about h2 {
+	font-size: 2.5rem;
+	font-family: var(--heading-font);
+	font-weight: 600;
+	color: var(--text-colour-1);
+	margin: 0 0 1.5rem;
+	letter-spacing: -0.02em;
+	line-height: 1.1;
+}
+
+.about p {
+	font-size: 1.45rem;
+	font-family: var(--body-font);
+	color: #5a4a40;
+	margin: 0 0 1.5rem;
+	line-height: 1.65;
+}
+
+.about-stats {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	padding-top: 2rem;
+	border-top: 1px solid #d4cfc8;
+}
+
+.stat-num {
+	font-family: var(--heading-font);
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: var(--text-colour-1);
+	display: block;
+	line-height: 1;
+	margin-bottom: 0.35rem;
+}
+
+.stat-label {
+	font-family: var(--body-font);
+	font-size: 0.8rem;
+	color: #7a6a60;
+}
+
+/* ── Disciplines ────────────────────────────────── */
+
+.disciplines {
+	padding: 5rem 0;
+	border-bottom: 1px solid #d4cfc8;
+}
+
+.disciplines h2 {
+	font-size: 2.5rem;
+	font-family: var(--heading-font);
+	font-weight: 600;
+	color: var(--text-colour-1);
+	margin: 0 0 3.5rem;
+	letter-spacing: -0.02em;
+}
+
+.disciplines-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #d4cfc8;
+}
+
+.discipline-row {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	padding: 2rem 0;
+	border-bottom: 1px solid #d4cfc8;
+	gap: 4rem;
+	text-decoration: none;
+	color: inherit;
+	transition: padding-left 0.3s ease;
+}
+
+.discipline-row:hover {
+	padding-left: 1rem;
+}
+
+.discipline-name {
+	font-family: var(--heading-font);
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: var(--text-colour-1);
+	letter-spacing: -0.01em;
+	transition: color 0.25s ease;
+}
+
+.discipline-row:hover .discipline-name {
+	color: #8b6a50;
+}
+
+.discipline-desc {
+	font-family: var(--body-font);
+	font-size: 0.9rem;
+	color: #7a6a60;
+	max-width: 32ch;
+	line-height: 1.6;
+	text-align: right;
+}
+
+.discipline-num {
+	font-family: var(--heading-font);
+	font-size: 0.65rem;
+	letter-spacing: 0.15em;
+	color: #a09080;
+	min-width: 2rem;
+}
+
+/* ── Careers ────────────────────────────────────── */
+
+.careers {
+	padding: 5rem 0;
+}
+
+.careers-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 4rem;
+}
+
+.careers h2 {
+	font-size: 2.5rem;
+	font-family: var(--heading-font);
+	font-weight: 600;
+	color: var(--text-colour-1);
+	margin: 0 0 0.75rem;
+	letter-spacing: -0.02em;
+}
+
+.careers p {
+	font-family: var(--body-font);
+	font-size: 1.45rem;
+	color: #7a6a60;
+	margin: 0;
+	max-width: 36ch;
+	line-height: 1.55;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+
+@media (max-width: 1100px) {
+	main {
+		padding: 0 4rem 10rem;
+	}
+	.hero h1 {
+		font-size: 3.5rem;
+	}
+	.prod-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+	.about {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+	.careers-inner {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+@media (max-width: 700px) {
+	main {
+		padding: 0 2rem 10rem;
+	}
+	.hero h1 {
+		font-size: 2.5rem;
+	}
+	.prod-grid {
+		grid-template-columns: 1fr;
+	}
+	.discipline-desc {
+		display: none;
+	}
+	.discipline-name {
+		font-size: 1.3rem;
+	}
+}
