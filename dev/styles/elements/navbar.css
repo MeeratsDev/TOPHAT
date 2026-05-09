@@ -63,7 +63,7 @@ nav ul li a.scrolled {
 
 nav ul li a:hover {
 	/* color: #eeeeee; */
-	color: #0d0b0b;
+	color: #1188ff;
 }
 
 /* Dropdown when moved to body */
@@ -83,11 +83,10 @@ body > .dropdown {
 		opacity 0.4s ease,
 		transform 0.5s ease,
 		visibility 0.2s;
-	border-radius: 10px;
 }
 
 body > .dropdown.scrolled {
-	background: linear-gradient(to bottom, #2b2625, #0d0b0b);
+	background: #2b2625;
 }
 
 body > .dropdown.active {
