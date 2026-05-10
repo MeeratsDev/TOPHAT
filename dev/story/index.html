@@ -5,60 +5,7 @@
 		<link rel="stylesheet" id="nav" href="../styles/elements/navbar.css" />
 		<link rel="stylesheet" id="footer" href="../styles/elements/footer.css" />
 		<link rel="stylesheet" id="legacy" href="../styles/elements/main-section.css" />
-		<title>The Team | Underworld Collective</title>
-		<style>
-			.barrier {
-				height: 7rem;
-			}
-
-			.prod-card {
-			    background: var(--background-colour-1);
-			    padding: 2.5rem;
-			    display: flex;
-			    flex-direction: row;          /* changed from column */
-			    align-items: center;
-			    justify-content: space-between;
-			    gap: 1.5rem;
-			    text-decoration: none;
-			    color: inherit;
-			    transition: background 0.25s ease;
-			}
-
-			.prod-card:hover {
-				background: #e8e4dc;
-			}
-
-			.prod-card h3 {
-				font-family: var(--heading-font);
-				font-size: 1.3rem;
-				font-weight: 600;
-				color: var(--text-colour-1);
-				margin: 0;
-				line-height: 1.25;
-			}
-
-			.prod-card img {
-			    width: 40%;
-			    height: auto;
-			    flex-shrink: 0;
-			    display: block;
-			}
-
-			.prod-card-text {
-			    display: flex;
-			    flex-direction: column;
-			    gap: 0.5rem;
-			}
-
-			.prod-card-meta {
-			    font-family: var(--body-font);
-			    font-size: 0.75rem;
-			    color: #a09080;
-			    margin-top: auto;
-			    padding-top: 1rem;
-			    border-top: 1px solid #d4cfc8;
-			}
-		</style>
+		<title>Home | Underworld Collective</title>
 	</head>
 	<body>
 		<header>
@@ -80,8 +27,8 @@
 							<a href="#">WHO WE ARE</a>
 							<ul class="dropdown">
 								<li><a></a></li>
-								<li><a href="../story/">Our Story</a></li>
-								<li><a href="./">The Team</a></li>
+								<li><a href="./">Our Story</a></li>
+								<li><a href="../the-team/">The Team</a></li>
 								<li><a href="#">Our Values</a></li>
 							</ul>
 						</li>
@@ -119,100 +66,32 @@
 		</header>
 
 		<main>
-			<section>
-				<div class="barrier"></div>
-			</section>
 
-			<section class="productions">
-				<p class="section-label">The Team</p>
-				<h2>The Team</h2>
-				<div class="prod-grid">
-					<a class="prod-card">
-						<div class="prod-card-text">
-							<h3>Bodhi Reimer</h3>
-							<span class="prod-card-meta">President & Creative Director</span>
-						</div>
-						<img src="../content/images/bodhi-reimer-new.jpg" alt="">
-					</a>
-
-					<a class="prod-card">
-						<div class="prod-card-text">
-							<h3>Riley Thorpe</h3>
-							<span class="prod-card-meta">Vice President, Creative Direction</span>
-						</div>
-						<img src="../content/images/placeholder.webp" alt="">
-					</a>
-
-					<a class="prod-card">
-						<div class="prod-card-text">
-							<h3>William Sammon</h3>
-							<span class="prod-card-meta">Vice President, Books & Print</span>
-						</div>
-						<img src="../content/images/placeholder.webp" alt="">
-					</a>
-
-					<a class="prod-card">
-						<div class="prod-card-text">
-							<h3>Lachlan Bellamy</h3>
-							<span class="prod-card-meta">Production Manager, Film & TV</span>
-						</div>
-						<img src="../content/images/placeholder.webp" alt="">
-					</a>
-
-					<a class="prod-card">
-						<div class="prod-card-text">
-							<h3>Charlie Shmakov</h3>
-							<span class="prod-card-meta">Production Associate, Art & Design</span>
-						</div>
-						<img src="../content/images/placeholder.webp" alt="">
-					</a>
-
-					<a class="prod-card">
-						<div class="prod-card-text">
-							<h3>Connor Hannaford</h3>
-							<span class="prod-card-meta">Production Associate, Art & Design</span>
-						</div>
-						<img src="../content/images/placeholder.webp" alt="">
-					</a>
-
-					<a class="prod-card">
-						<div class="prod-card-text">
-							<h3>Finn Schmidt</h3>
-							<span class="prod-card-meta">Technical Architect, Programming</span>
-						</div>
-						<img src="../content/images/placeholder.webp" alt="">
-					</a>
-
-					<a class="prod-card">
-						<div class="prod-card-text">
-							<h3>Hayden Northend</h3>
-							<span class="prod-card-meta">Technical Associate, Programming</span>
-						</div>
-						<img src="../content/images/placeholder.webp" alt="">
-					</a>
-
-					<a class="prod-card">
-						<div class="prod-card-text">
-							<h3>Justin Miorandi</h3>
-							<span class="prod-card-meta">Technical Associate, Programming</span>
-						</div>
-						<img src="../content/images/placeholder.webp" alt="">
-					</a>
-
+			<!-- ── HERO ─────────────────────────────────────── -->
+			<section class="hero">
+				<h1>Our Story.</h1>
+				<p>
+					Explore the story behind the founding of Underworld Collective.
+				</p>
+				<div class="hero-actions">
+				<a href="#story" class="btn btn-dark">Our Story</a>
+					<a href="../the-team/" class="btn btn-outline">The Team</a>
 				</div>
 			</section>
 
-			<section class="careers">
-				<div class="careers-inner">
-					<div>
-						<p class="section-label">Careers</p>
-						<h2>Come work in the dark.</h2>
-						<p>We're always looking for people who care about craft. See what's open.</p>
-					</div>
-					<div style="display:flex; gap:1rem; flex-shrink:0;">
-						<a href="#" class="btn btn-dark">Open Roles</a>
-						<a href="#" class="btn btn-outline">Internships</a>
-					</div>
+			<!-- ── ABOUT ─────────────────────────────────────── -->
+			<section class="about" id="story">
+				<div>
+					<p class="section-label">Who We Are</p>
+					<h2>The Story of Underworld</h2>
+					<p>In 2022 Bodhi Reimer's close friend Riley Thorpe began making a series called 'The Battle' on YouTube, Reimer enjoyed the concept and eventually asked Thorpe if he'd be fine with Reimer making a similar series which Thorpe agreed to, this series would come to be known as 'Warfront'.</p>
+					<p>'Warfront' was the pioneer series for Reimer to create a universe all his own, 'Warfront' would then run from June of 2022 up until its final episode titled "Warfront episode 5 - the ultimate defeat (season finale)" released on YouTube on the 7th of January 2023. Reimer would then go on to create a crossover episode with Thorpe titled "The Battle - Season 2 Episode 6 - Displaced" which would be premiere on both Thorpe's and Reimer's YouTube channels on April 6th 2024. The original title of said episode for 'Warfront' was "Warfront - Season 2 Episode 1 - Displaced" although it would later be changed to "Warfront - Displaced" as plans for a season 2 would be cancelled.</p>
+					<p>Reimer would then release Bernard the Bunny, a Roguelike video game he worked on with the help of friends Justin Miorandi, William Sammon, & Finn Schmidt in October of 2024 under a studio named "Blankslate Games". Internally, the idea of a massive Jedi: Fallen Order style game titled "Shadow of Orion" began circulating and eventually began production in Unity with a now much larger team of 8 people including Reimer before they realised the scope was too large and they shutdown the project.</p>
+					<p>"Shadow of Orion" would then be revisited several times throughout 2025 even getting into full production now in Unreal Engine 5 with a name change to "Forces of Supremacy" and a gameplay shift to a more Helldivers 2 style game however even with the smaller scope the project would eventually be shelved once again.</p>
+					<p>Reimer would then stay relatively quiet until October 14th 2025 when he released the biggest project he had worked on, a streaming service called "Viewpoint". The platform wouldn't see much traction and Reimer would stop working on it in November of the same year before returning to the project in December of 2025 where he'd completely remake the entire platform from scratch, including more features, a refined UI, and most importantly, a rebrand to "WatchFlicker". "WatchFlicker" would then release on New Years Day of 2026.</p>
+					<p>Alongside "WatchFlicker" came the third season of 'The Battle' which would now be exclusively released on "WatchFlicker". Following the release of WatchFlicker, Reimer would shift his focus back to working on Forces of Supremacy, this time as a grand strategy game titled "Sectorfall", after 4 months of development Sectorfall would release in a "Pre-Early Access" state on itch.io on the 5th of April 2026 with Early Access planned for September of 2026.</p>
+					<p>In May of 2026 Reimer had a vision for a studio that could make not just content but stories, stories that impacted people like the stories he loved growing up that he felt no longer existed under studios owned by large corporations. And thus with this vision he decided to finally unify all his projects & his team under one independent banner which would be known as "Underworld Collective"</p>
+					<a href="./the-team/" class="btn btn-outline" style="margin-top: 1rem;">Meet the team</a>
 				</div>
 			</section>
 
