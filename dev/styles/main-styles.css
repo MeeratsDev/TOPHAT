@@ -43,3 +43,7 @@ main h3 {
 	font-size: 1.65rem;
 	font-weight: 600;
 }
+
+.barrier {
+	height: 7rem;
+}

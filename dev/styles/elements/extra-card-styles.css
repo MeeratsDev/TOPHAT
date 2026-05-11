@@ -1,0 +1,47 @@
+.prod-card {
+	background: var(--background-colour-1);
+	padding: 2.5rem;
+	display: flex;
+	flex-direction: row; /* changed from column */
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+	text-decoration: none;
+	color: inherit;
+	transition: background 0.25s ease;
+}
+
+.prod-card:hover {
+	background: #e8e4dc;
+}
+
+.prod-card h3 {
+	font-family: var(--heading-font);
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: var(--text-colour-1);
+	margin: 0;
+	line-height: 1.25;
+}
+
+.prod-card img {
+	width: 40%;
+	height: auto;
+	flex-shrink: 0;
+	display: block;
+}
+
+.prod-card-text {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.prod-card-meta {
+	font-family: var(--body-font);
+	font-size: 0.75rem;
+	color: #a09080;
+	margin-top: auto;
+	padding-top: 1rem;
+	border-top: 1px solid #d4cfc8;
+}
