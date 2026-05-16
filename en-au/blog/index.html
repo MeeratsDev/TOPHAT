@@ -214,7 +214,7 @@
 	<script src="./js/blog-rendering.js" id="blog-renderer"></script>
 	<script>
 		async function main() {
-			const response = await fetch("./posts/txt.md");
+			const response = await fetch("./posts/welcome.txt");
 			const md = await response.text();
 			const { html, metaHtml, meta } = MD.parse(md);
 			document.getElementById("blog-content").innerHTML = `<article class="post">${metaHtml}${html}</article>`;
