@@ -44,6 +44,15 @@
 			},
 		);
 
+		if (opts.smart) {
+			src = src
+				.replace(/---/g, "&mdash;")
+				.replace(/--/g, "&ndash;")
+				.replace(/\.\.\./g, "&hellip;")
+				.replace(/"([^"]+)"/g, "\u201C$1\u201D")
+				.replace(/'([^']+)'/g, "\u2018$1\u2019");
+		}
+
 		// Images
 		src = src.replace(
 			/!\[([^\]]*)\]\((\S+?)(?:\s+"([^"]*)")?\)/g,
@@ -81,15 +90,6 @@
 			/<([^\s@>]+@[^\s@>]+\.[^\s@>]+)>/g,
 			(_, e) => `<a href="mailto:${e}">${e}</a>`,
 		);
-
-		if (opts.smart) {
-			src = src
-				.replace(/---/g, "&mdash;")
-				.replace(/--/g, "&ndash;")
-				.replace(/\.\.\./g, "&hellip;")
-				.replace(/"([^"]+)"/g, "\u201C$1\u201D")
-				.replace(/'([^']+)'/g, "\u2018$1\u2019");
-		}
 
 		src = src.replace(/( {2}|\\)\n/g, "<br>\n");
 

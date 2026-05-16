@@ -5,6 +5,8 @@ author: Bodhi Reimer
 date: 2026-05-16
 ---
 
+![Underworld-Collective](posts/images/uc-banner.png)
+
 We would like to officially introduce ourselves and share the journey that led to the formation of **Underworld Collective**.
 
 Our roots trace back to 2022, beginning with an independent YouTube series titled _Warfront_, created by our founder, Bodhi Reimer. Inspired by a project from his close colleague Riley Thorpe, _Warfront_ served as our initial venture into narrative world-building.
