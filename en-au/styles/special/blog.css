@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+
+:root {
+	--background-colour-1: #efefe8;
+	--text-colour-1: #2b1f16;
+	--heading-font: "Aleo", serif;
+	--body-font: "Figtree", sans-serif;
+
+	/* Derived palette */
+	--text-muted: #6b5c50;
+	--text-faint: #9c8f85;
+	--border: rgba(43, 31, 22, 0.15);
+	--border-strong: rgba(43, 31, 22, 0.25);
+	--surface: rgba(43, 31, 22, 0.05);
+	--accent: #8b4a2b;
+	--accent-pale: rgba(139, 74, 43, 0.1);
+}
+
+/* ── Post meta header ────────────────────────────────────────────────────── */
+
+.post-meta {
+	margin-bottom: 2.5em;
+	padding-bottom: 1.6em;
+	border-bottom: 1px solid var(--border);
+}
+
+.post-meta__title {
+	font-family: var(--heading-font);
+	font-size: 2.6rem;
+	font-weight: 600;
+	letter-spacing: -0.025em;
+	line-height: 1.15;
+	color: var(--text-colour-1);
+	margin: 0 0 0.5em;
+}
+
+.post-meta__subtitle {
+	font-family: var(--heading-font);
+	font-size: 1.2rem;
+	font-weight: 400;
+	font-style: italic;
+	color: var(--text-muted);
+	margin: -0.2em 0 0.75em;
+	line-height: 1.4;
+}
+
+.post-meta__description {
+	font-size: 0.95rem;
+	color: var(--text-muted);
+	line-height: 1.6;
+	margin: 0 0 0.75em;
+}
+
+/* Single byline row — everything on one line, separated by · */
+.post-meta__byline {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0;
+	font-family: var(--body-font);
+	font-size: 0.85rem;
+	font-weight: 400;
+	color: var(--text-muted);
+	margin: 0.5em 0 0;
+}
+
+.post-meta__author,
+.post-meta__date,
+.post-meta__updated,
+.post-meta__category {
+	color: var(--text-muted);
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Dot between every adjacent byline item */
+.post-meta__byline > * + *::before {
+	content: "·";
+	margin: 0 0.55em;
+	color: var(--text-faint);
+}
+
+/* Tags inline after the byline */
+.post-meta__tags {
+	list-style: none;
+	padding: 0;
+	margin: 0.75em 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.post-meta__tag {
+	font-size: 0.78rem;
+	font-weight: 400;
+	color: var(--text-faint);
+	border: 1px solid var(--border);
+	border-radius: 3px;
+	padding: 2px 8px;
+	line-height: 1.6;
+}
+
+/* Extra / unknown keys — same single line treatment */
+.post-meta__extra {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+	margin: 0.6em 0 0;
+	font-size: 0.85rem;
+	color: var(--text-muted);
+}
+
+.post-meta__extra-item {
+	display: flex;
+	align-items: baseline;
+	gap: 4px;
+}
+
+.post-meta__extra-item + .post-meta__extra-item::before {
+	content: "·";
+	margin: 0 0.55em;
+	color: var(--text-faint);
+}
+
+.post-meta__extra-item dt {
+	font-weight: 400;
+	color: var(--text-faint);
+}
+
+.post-meta__extra-item dt::after {
+	content: ":";
+}
+
+.post-meta__extra-item dd {
+	color: var(--text-muted);
+}
+
+/* ── Reset ───────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* ── Page ────────────────────────────────────────────────────────────────── */
+
+body {
+	background-color: var(--background-colour-1);
+	color: var(--text-colour-1);
+	font-family: var(--body-font);
+	font-size: 18px;
+	line-height: 1.75;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* ── Article wrapper ─────────────────────────────────────────────────────── */
+/* Wrap your MD.parse() html output in <article class="post"> */
+
+.post {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 64px 24px 96px;
+}
+
+/* ── Headings ────────────────────────────────────────────────────────────── */
+
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+	font-family: var(--heading-font);
+	color: var(--text-colour-1);
+	line-height: 1.2;
+	margin: 1.8em 0 0.5em;
+}
+
+.post h1 {
+	font-size: 2.4rem;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	margin-top: 0;
+}
+
+.post h2 {
+	font-size: 1.7rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid var(--border);
+}
+
+.post h3 {
+	font-size: 1.3rem;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.post h4 {
+	font-size: 1.05rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--text-muted);
+}
+
+.post h5,
+.post h6 {
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--text-muted);
+}
+
+/* ── Paragraphs & body text ──────────────────────────────────────────────── */
+
+.post p {
+	margin: 1.1em 0;
+	color: var(--text-colour-1);
+}
+
+.post strong {
+	font-weight: 600;
+}
+
+.post em {
+	font-style: italic;
+}
+
+.post del {
+	text-decoration: line-through;
+	color: var(--text-faint);
+}
+
+/* ── Links ───────────────────────────────────────────────────────────────── */
+
+.post a {
+	color: var(--accent);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+	text-decoration-thickness: 1px;
+	transition: opacity 0.15s;
+}
+
+.post a:hover {
+	opacity: 0.75;
+}
+
+/* ── Blockquote ──────────────────────────────────────────────────────────── */
+
+.post blockquote {
+	border-left: 3px solid var(--accent);
+	margin: 1.8em 0;
+	padding: 0.2em 1.2em;
+	color: var(--text-muted);
+	font-family: var(--heading-font);
+	font-style: italic;
+	font-size: 1.15rem;
+	line-height: 1.6;
+}
+
+.post blockquote p {
+	color: inherit;
+	margin: 0.4em 0;
+}
+
+.post blockquote blockquote {
+	font-size: 1rem;
+	border-left-color: var(--border-strong);
+}
+
+/* ── Code ────────────────────────────────────────────────────────────────── */
+
+.post code {
+	font-family: "DM Mono", "Fira Mono", "Consolas", monospace;
+	font-size: 0.85em;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	padding: 0.15em 0.4em;
+	color: var(--accent);
+}
+
+.post pre {
+	background: var(--text-colour-1);
+	border-radius: 8px;
+	padding: 1.4em 1.6em;
+	margin: 1.6em 0;
+	overflow-x: auto;
+	line-height: 1.6;
+}
+
+.post pre code {
+	font-size: 0.875rem;
+	background: none;
+	border: none;
+	padding: 0;
+	border-radius: 0;
+	color: #e8e2d9;
+}
+
+/* ── Horizontal rule ─────────────────────────────────────────────────────── */
+
+.post hr {
+	border: none;
+	border-top: 1px solid var(--border);
+	margin: 2.5em 0;
+}
+
+/* ── Lists ───────────────────────────────────────────────────────────────── */
+
+.post ul,
+.post ol {
+	padding-left: 1.6em;
+	margin: 1em 0;
+}
+
+.post li {
+	margin: 0.35em 0;
+	line-height: 1.7;
+}
+
+.post li::marker {
+	color: var(--text-faint);
+}
+
+.post ul ul,
+.post ol ol,
+.post ul ol,
+.post ol ul {
+	margin: 0.25em 0;
+}
+
+/* Task list */
+.post li input[type="checkbox"] {
+	margin-right: 0.5em;
+	accent-color: var(--accent);
+	transform: translateY(1px);
+}
+
+/* ── Tables ──────────────────────────────────────────────────────────────── */
+
+.post table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.95rem;
+	margin: 1.6em 0;
+}
+
+.post th {
+	font-family: var(--body-font);
+	font-weight: 600;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--text-muted);
+	text-align: left;
+	padding: 10px 14px;
+	background: var(--surface);
+	border-top: 1px solid var(--border);
+	border-bottom: 1px solid var(--border);
+}
+
+.post td {
+	padding: 10px 14px;
+	border-bottom: 1px solid var(--border);
+	color: var(--text-colour-1);
+	vertical-align: top;
+}
+
+.post tr:last-child td {
+	border-bottom: none;
+}
+
+/* ── Images ──────────────────────────────────────────────────────────────── */
+
+.post img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 6px;
+	display: block;
+	margin: 1.6em 0;
+}
+
+/* ── Footnotes ───────────────────────────────────────────────────────────── */
+
+.post .footnotes {
+	margin-top: 3em;
+	font-size: 0.875rem;
+	color: var(--text-muted);
+}
+
+.post .footnotes hr {
+	margin-bottom: 1.2em;
+}
+
+.post .footnotes ol {
+	padding-left: 1.4em;
+}
+
+.post .footnotes li {
+	margin: 0.4em 0;
+	line-height: 1.6;
+}
+
+.post .footnotes a {
+	color: var(--text-muted);
+}
+
+.post sup a {
+	font-size: 0.75em;
+	text-underline-offset: 2px;
+	color: var(--accent);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 800px) {
+	.post {
+		padding: 40px 20px 72px;
+	}
+
+	.post h1 {
+		font-size: 1.9rem;
+	}
+	.post h2 {
+		font-size: 1.4rem;
+	}
+	.post h3 {
+		font-size: 1.15rem;
+	}
+
+	.post pre {
+		padding: 1em 1.1em;
+		border-radius: 6px;
+	}
+
+	.post table {
+		font-size: 0.85rem;
+	}
+
+	.post th,
+	.post td {
+		padding: 8px 10px;
+	}
+}
