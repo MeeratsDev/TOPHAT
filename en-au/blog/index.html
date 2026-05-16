@@ -141,7 +141,7 @@
 									<line x1="8" y1="8" x2="8" y2="8.5" />
 									<path d="M12 16v-5m0 0c0-1.5 4-1.5 4 0v5" />
 								</svg>
-							<!--</a>-->
+							</a>
 							<a href="#" aria-label="Vimeo">
 								<svg
 									width="14"
@@ -214,7 +214,7 @@
 	<script src="./js/blog-rendering.js" id="blog-renderer"></script>
 	<script>
 		async function main() {
-			const response = await fetch("./posts/welcome.md");
+			const response = await fetch("./posts/txt.md");
 			const md = await response.text();
 			const { html, metaHtml, meta } = MD.parse(md);
 			document.getElementById("blog-content").innerHTML = `<article class="post">${metaHtml}${html}</article>`;
