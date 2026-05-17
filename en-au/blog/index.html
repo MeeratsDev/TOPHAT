@@ -6,6 +6,50 @@
 		<link rel="stylesheet" id="footer" href="../styles/elements/footer.css" />
 		<link rel="stylesheet" id="legacy" href="../styles/elements/main-section.css" />
 		<link rel="stylesheet" id="blog" href="../styles/special/blog.css" !important/>
+		<style>
+			.post-nav {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				position: relative;
+				align-items: center;
+				width: 100%;
+				gap: 1rem;
+				margin: 3rem 0 1rem;
+				padding-top: 2rem;
+				opacity: 0.85;
+				box-sizing: border-box;
+			}
+			.post-nav__link {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				text-decoration: none;
+				color: inherit;
+				transition: opacity 0.2s ease, gap 0.2s ease;
+				font-size: 0.9rem;
+				letter-spacing: 0.02em;
+			}
+			.post-nav__link--prev { flex-direction: row; }
+			.post-nav__link--next { flex-direction: row-reverse; }
+			.post-nav__link--disabled { display: none; }
+			.post-nav__arrow {
+				font-size: 1.4rem;
+				line-height: 1;
+				transition: transform 0.2s ease;
+				display: inline-block;
+			}
+			.post-nav__label {
+				font-weight: 600;
+				text-transform: uppercase;
+				font-size: 0.75rem;
+				letter-spacing: 0.08em;
+			}
+			.post-nav__date { opacity: 0.65; }
+			.post-nav__link--prev:hover .post-nav__arrow { transform: translateX(-4px); }
+			.post-nav__link--next:hover .post-nav__arrow { transform: translateX(4px); }
+			.post-nav__link:hover { opacity: 1; gap: 0.75rem; }
+		</style>
 		<title>Blog | Underworld Collective</title>
 	</head>
 	<body>
@@ -70,7 +114,6 @@
 			<section class="blog">
 				<div class="barrier"></div>
 				<div class="blog-post-content" id="blog-content"></div>
-				<div class="blog-post-meta" id="blog-meta"></div>
 			</section>
 
 		</main>
@@ -212,13 +255,49 @@
 
 	<script src="../styles/elements/navbar.js" id="navbar-script"></script>
 	<script src="./js/blog-rendering.js" id="blog-renderer"></script>
-	<script>
-		async function main() {
-			const response = await fetch("./posts/welcome.md");
+	<script>		async function main() {
+			// 1. Load the post index (array of date-named slugs, e.g. ["2025-03-01","2026-05-17"])
+			let index = [];
+			try {
+				const idxRes = await fetch("./posts/index.json");
+				const raw = await idxRes.json();
+				// Normalise: strip any accidental .md extensions
+				index = raw.map(function(s) { return s.replace(/\.md$/i, "").trim(); });
+				// Ensure chronological order
+				index.sort();
+			} catch (e) {
+				console.warn("Could not load posts/index.json", e);
+			}
+
+			// 2. Determine current post
+			const params = new URLSearchParams(window.location.search);
+			const rawParam = params.get("post");
+			const requested = rawParam ? rawParam.replace(/\.md$/i, "").trim() : null;
+			const postName = (requested && index.includes(requested))
+				? requested
+				: index[index.length - 1];
+
+			console.log("[blog] index:", index);
+			console.log("[blog] requested:", requested, "showing:", postName);
+
+			// 3. Fetch & render the post
+			const response = await fetch("./posts/" + postName + ".md");
 			const md = await response.text();
 			const { html, metaHtml, meta } = MD.parse(md);
-			document.getElementById("blog-content").innerHTML = `<article class="post">${metaHtml}${html}</article>`;
+			document.getElementById("blog-content").innerHTML =
+				"<article class=\"post\">" + metaHtml + html + "</article>";
+
+			// 4. Render prev / next navigation
+			const currentIdx = index.indexOf(postName);
+			const prevPost = currentIdx > 0 ? index[currentIdx - 1] : null;
+			const nextPost = currentIdx < index.length - 1 ? index[currentIdx + 1] : null;
+
+			console.log("[blog] idx:", currentIdx, "prev:", prevPost, "next:", nextPost);
+
+			const nav = MD.renderPostNav({ prevPost, nextPost });
+			document.getElementById("blog-content").innerHTML += nav;
 		}
+
 		main();
 	</script>
 

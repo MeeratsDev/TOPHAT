@@ -475,6 +475,71 @@
 		return h;
 	}
 
+	// ── Post navigation renderer ─────────────────────────────────────────────────
+
+	/**
+	 * Render a previous / next navigation bar for blog posts.
+	 *
+	 * @param {{ prevPost: string|null, nextPost: string|null }} opts
+	 *   prevPost / nextPost are date-string slugs like "2026-05-17", or null.
+	 * @returns {string} HTML string
+	 */
+	function renderPostNav({ prevPost, nextPost }) {
+		if (!prevPost && !nextPost) return "";
+
+		function fmtSlug(s) {
+			const d = new Date(s + "T00:00:00");
+			if (isNaN(d)) return s;
+			return d.toLocaleDateString("en", {
+				year: "numeric",
+				month: "long",
+				day: "numeric",
+			});
+		}
+
+		function postUrl(s) {
+			return "?post=" + encodeURIComponent(s);
+		}
+
+		let h = '<nav class="post-nav" aria-label="Post navigation">\n';
+
+		if (prevPost) {
+			h +=
+				'<a class="post-nav__link post-nav__link--prev" href="' +
+				postUrl(prevPost) +
+				'" aria-label="Previous post">' +
+				'<span class="post-nav__arrow" aria-hidden="true">&#8592;</span>' +
+				'<span class="post-nav__label">Previous</span>' +
+				'<span class="post-nav__date">' +
+				fmtSlug(prevPost) +
+				"</span>" +
+				"</a>\n";
+		} else {
+			h +=
+				'<span class="post-nav__link post-nav__link--prev post-nav__link--disabled" aria-hidden="true"></span>\n';
+		}
+
+		if (nextPost) {
+			h +=
+				'<a class="post-nav__link post-nav__link--next" href="' +
+				postUrl(nextPost) +
+				'" aria-label="Next post">' +
+				'<span class="post-nav__date">' +
+				fmtSlug(nextPost) +
+				"</span>" +
+				'<span class="post-nav__label">Next</span>' +
+				'<span class="post-nav__arrow" aria-hidden="true">&#8594;</span>' +
+				"</a>\n";
+		} else {
+			h +=
+				'<span class="post-nav__link post-nav__link--next post-nav__link--disabled" aria-hidden="true"></span>\n';
+		}
+
+		h += "</nav>\n";
+
+		return h;
+	}
+
 	// ── Public API ───────────────────────────────────────────────────────────────
 
 	/**
@@ -503,5 +568,5 @@
 		return { html, metaHtml, meta };
 	}
 
-	return { parse };
+	return { parse, renderPostNav };
 });
