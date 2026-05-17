@@ -1,5 +1,5 @@
 ---
-title: Welcome the Underworld
+title: Welcome to the Underworld
 subtitle: A brief history of us!
 author: Bodhi Reimer
 date: 2026-05-16
